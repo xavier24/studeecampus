@@ -1,0 +1,348 @@
+@charset "UTF-8";
+/*play*/
+/*pause*/
+/*warning*/
+/*
+   Table of Contents
+   =============================================================================
+	1 Fontello
+	2 Base style
+	3 Header style
+	4 Sidebar style
+	5 Content style
+		5.1 Dashboard
+	6 Contenu
+		6.1 UNE (home)
+		6.2 Random (home)
+		6.3 Event (home)
+		6.4 Movie (home)
+		6.5 Communaut├® social (home)
+	
+	
+	Blog style (blog)
+	Contact form (contact) style
+	Footer
+	Media queries
+	
+	- Typography
+	- Form
+	- Table
+	- Images
+	- Header
+	- Main styles
+	- Sidebar & Widget
+	- Comments
+	- Footer
+	- Plugins
+	- Utilities
+	- Pagination
+	- Miscellaneous
+	- Conditional IE class
+   =============================================================================
+*/
+/* ==========================================================================
+   1) FONTELLO
+   ========================================================================== */
+/*@import "fontello";*/
+/* ==========================================================================
+   2) Base style
+   ========================================================================== */
+html, body {
+  height: 100%; }
+
+body {
+  background-color: #F5F5F5;
+  color: #606060; }
+
+.wrapper {
+  min-height: 100%;
+  margin: 0 auto -40px;
+  /* the bottom margin is the negative value of the footer's height */
+  -width: 1024px; }
+
+footer, .push {
+  height: 40px;
+  /* '.push' must be the same height as 'footer' */ }
+
+footer {
+  background: #303746; }
+
+#page {
+  background-color: #303746; }
+
+.notification {
+  position: relative; }
+  .notification .alert-notification {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid #1E222B;
+    background: #D83B3A;
+    color: white;
+    text-align: center;
+    display: block;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+/* ==========================================================================
+   3) Header style
+   ========================================================================== */
+header {
+  background-color: #1E222B;
+  position: relative;
+  -webkit-box-shadow: 0 0 2px black;
+  -moz-box-shadow: 0 0 2px black;
+  box-shadow: 0 0 2px black;
+  padding: 10px;
+  line-height: 49px;
+  z-index: 100; }
+  header h1 {
+    float: left;
+    margin: 0px; }
+    header h1 a {
+      background: url("../img/StudeeCampus-logo-header.png") 0 0 no-repeat transparent;
+      display: block;
+      height: 45px;
+      width: 217px;
+      overflow: hidden;
+      text-indent: 101%;
+      white-space: nowrap; }
+  header .header-control, header .header-control a {
+    margin: 0 10px 0 3px;
+    color: #6c707b; }
+    header .header-control .glyphicon, header .header-control a .glyphicon {
+      line-height: inherit; }
+    header .header-control .control-icon, header .header-control a .control-icon {
+      font-size: 1.2em;
+      display: block;
+      padding-right: 5px; }
+  header .notification .alert-notification {
+    font-size: 10px;
+    line-height: 15px;
+    height: 17px;
+    width: 17px;
+    right: 0;
+    top: 7px; }
+
+header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030; }
+
+/* ==========================================================================
+   4) Sidebar style
+   ========================================================================== */
+#sidebar {
+  float: left;
+  width: 72px; }
+  #sidebar ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style-type: none;
+    color: #ACAFB5; }
+  #sidebar .item-sidebar {
+    font-size: 18px;
+    line-height: 18px; }
+    #sidebar .item-sidebar a {
+      color: inherit;
+      display: block;
+      padding: 8px 2px;
+      text-decoration: none; }
+    #sidebar .item-sidebar .label-item {
+      font-size: 10px;
+      display: block; }
+    #sidebar .item-sidebar .alert-notification {
+      height: 11px;
+      right: 22px;
+      top: 3px;
+      width: 11px; }
+  #sidebar .item-sidebar.active, #sidebar .item-sidebar:active, #sidebar .item-sidebar:hover {
+    background-color: #404755; }
+
+/* ==========================================================================
+   5) Content style
+   ========================================================================== */
+#contenu {
+  background-color: #F5F5F5;
+  margin-left: 72px; }
+
+.alert-warning {
+  background-color: #FFB200;
+  color: white;
+  line-height: 52px;
+  font-size: 1.1em;
+  /*@include box-shadow(0 0 2px rgba(0,0,0,.3) inset);*/ }
+  .alert-warning strong i {
+    font-size: 1.25em;
+    float: left;
+    margin-right: 2px; }
+  .alert-warning strong a {
+    border-bottom: 1px solid;
+    padding-bottom: 1px;
+    color: inherit;
+    text-decoration: none; }
+  .alert-warning .alert-cancel {
+    background-color: #FFC133;
+    width: 52px;
+    display: block;
+    text-align: center;
+    margin-right: -15px; }
+  .alert-warning .alert-cancel:hover {
+    cursor: pointer; }
+
+/* ==========================================================================
+  5.1) Dashboard style
+  ========================================================================== */
+.block {
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 0;
+  margin-top: 15px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+  .block > h1 {
+    font-size: 14px;
+    color: #374972;
+    text-transform: uppercase;
+    margin: 0 0 5px; }
+  .block article {
+    padding: 10px 0; }
+    .block article h1 {
+      font-size: 17px;
+      margin-top: 5px;
+      margin-bottom: 0; }
+    .block article h2 {
+      font-size: 13px;
+      color: #A4A4A4;
+      margin-top: 2px;
+      margin-bottom: 0; }
+    .block article .next a {
+      display: block;
+      font-size: 1.35em;
+      line-height: 40px;
+      text-align: center;
+      width: 36px; }
+    .block article .next + .media-infos {
+      padding-right: 36px; }
+    .block article .play {
+      color: #27A8DF; }
+    .block article .pause {
+      color: #E65757; }
+  .block article + article {
+    border-top: 1px solid #EBEBEB; }
+  .block .show-more {
+    text-align: center;
+    margin: 0 -15px;
+    border-top: 1px solid #EBEBEB; }
+    .block .show-more a {
+      display: block;
+      padding: 5px;
+      color: inherit;
+      text-decoration: none; }
+    .block .show-more a:hover, .block .show-more a:active {
+      background: #DDD;
+      color: #606060; }
+    .block .show-more p {
+      margin: 0; }
+    .block .show-more span {
+      font-size: 1.8em;
+      line-height: 0.6em;
+      display: block; }
+  .block .progress {
+    height: 8px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    background-color: #fff;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin: 13px 5px 0 0;
+    padding: 0;
+    float: left; }
+  .block .progress-bar {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+  .block .progress-bar-play {
+    border: 1px solid #27A8DF; }
+    .block .progress-bar-play .progress-bar {
+      background-color: #27A8DF; }
+  .block .progress-bar-pause {
+    border: 1px solid #E65757; }
+    .block .progress-bar-pause .progress-bar {
+      background-color: #E65757; }
+  .block .progress + .progress-procent {
+    margin-top: 6px;
+    display: inline-block; }
+  .block .progress-statut {
+    text-transform: uppercase;
+    margin-left: 5px;
+    font-size: 0.875em;
+    display: inline-block; }
+  .block .program-progress .progress {
+    height: 8px; }
+  .block .badge-progress .progress {
+    height: 6px;
+    margin-top: 6px; }
+
+#dashboard-agenda #today {
+  background-color: #404755;
+  color: #fff;
+  margin-top: -10px; }
+  #dashboard-agenda #today .number {
+    font-size: 56px;
+    line-height: 65px;
+    margin-right: 10px; }
+  #dashboard-agenda #today .month {
+    font-size: 27px;
+    line-height: 1em;
+    padding-top: 10px;
+    display: block; }
+  #dashboard-agenda #today .day {
+    font-size: 15px;
+    text-transform: uppercase;
+    display: block;
+    line-height: 1em; }
+#dashboard-agenda .agenda-day {
+  background-color: #303746;
+  color: white;
+  text-transform: uppercase;
+  line-height: 31px; }
+  #dashboard-agenda .agenda-day a {
+    color: white;
+    display: block;
+    text-align: center;
+    width: 20px; }
+  #dashboard-agenda .agenda-day .glyphicon {
+    font-size: 7px;
+    line-height: inherit; }
+#dashboard-agenda .agenda-hour {
+  padding-top: 10px;
+  padding-bottom: 25px; }
+  #dashboard-agenda .agenda-hour p {
+    margin: 0; }
+#dashboard-agenda .show-more span {
+  font-size: 7px;
+  line-height: 20px;
+  margin-left: 10px;
+  margin-right: 15px;
+  float: right; }
+
+#dashboard-badges img.in-progress {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%); }
+
+/*# sourceMappingURL=style.css.map */
